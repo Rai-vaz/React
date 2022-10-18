@@ -1,0 +1,9 @@
+.Buttom_Click{
+    padding: 10px 20px;
+    background-color: rgb(14, 14, 234);
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}

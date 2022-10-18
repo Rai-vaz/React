@@ -1,24 +1,18 @@
 import './App.css';
-import HelloWorld from './components/HelloWorld';
+/*import HelloWorld from './components/HelloWorld';
+import SayMyName from './components/SayMyName';
+import Pessoa from './components/Pessoa';
+import List from './components/List';*/
+import Evento from './components/Evento';
+import Form from './components/Form'
+
 
 function App() {
-  const name = "Raí vaz";
-  const Newname = name.toLowerCase();
-  const url = 'https://via.placeholder.com/150'
-
-  function soma(a, b) {
-    return a + b;
-  }
-
-  
   return (
     <div className="App">
-      <h1>Olá React</h1>
-      <p>Seja bem vindo senhor {Newname}</p>
-      <p>Soma {soma(3,7)}</p>
-      <img src={url} alt="Minha imagem dinamica" />
-      <HelloWorld/>
-      
+      <Evento numero={1}/>
+      <Evento numero={2}/>
+      <Form/>
     </div>
   );
 }
