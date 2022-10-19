@@ -1,13 +1,19 @@
-import styles from './Evento.module.css'
+import styles from './Evento.module.css';
+import Button from './evento/Button';
 
 function Evento({numero}) {
     function EventoClick(){
-        console.log(`Opa clicou e número é ${numero}`);
+        console.log(`Evento disparado`);
+    }
+
+    function segundoEvento() {
+        console.log('Disparado segundo evento')
     }
     return(
         <div>
             <p >Clique para disparar um evento</p>
-            <button className={styles.Buttom_Click} onClick={EventoClick}>Ativar</button>
+            <Button event={EventoClick} text="Primeiro Evento"/>
+            <Button event={segundoEvento} text="Segundo Evento"/>
         </div>
     )
 }
