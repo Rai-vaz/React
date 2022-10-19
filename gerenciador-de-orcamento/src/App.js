@@ -1,23 +1,22 @@
-import './App.css';
-import Condicional from './components/Condicional';
-/*import HelloWorld from './components/HelloWorld';
-import SayMyName from './components/SayMyName';
-import Pessoa from './components/Pessoa';
-import List from './components/List';*/
-import Evento from './components/Evento';
-import Form from './components/Form'
-import Lista from './components/Lista';
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+
+import Home from './Pages/Home'
+import Empresa from './Pages/Empresa'
+import Contato from './Pages/Contato'
+import NavBar from "./components/NavBar";
 
 
 function App() {
-  const meusItens = ['React', 'Vue', 'Angular']
-  const empty = []
-  return (
-    <div className="App">
-      <h1>Renderizando Lista</h1>
-      <Lista itens={meusItens}/>
-      <Lista itens={empty}/>
-    </div>
+  
+  return ( 
+      <Router>
+        <NavBar/>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/empresa" element={<Empresa/>}/>
+          <Route path="/contato" element={<Contato/>}/>
+        </Routes>
+      </Router>
   );
 }
 
