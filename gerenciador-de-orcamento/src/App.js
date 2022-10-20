@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import {FaFacebook, FaAndroid} from 'react-icons/fa'
 
 import Home from './Pages/Home'
 import Empresa from './Pages/Empresa'
@@ -16,6 +17,8 @@ function App() {
           <Route path="/empresa" element={<Empresa/>}/>
           <Route path="/contato" element={<Contato/>}/>
         </Routes>
+        <FaFacebook/>
+        <FaAndroid/>
       </Router>
   );
 }
